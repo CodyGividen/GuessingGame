@@ -22,23 +22,23 @@ public class Main {
         do {
             int randonumber = (int) Math.ceil(Math.random() * 100);
             System.out.println(randonumber);
-
             do {
 
-                System.out.println("Enter Your Guess:");
-                userGuess = input.nextInt();
-                if (userGuess > randonumber) {
-                    System.out.println("your number is to high");
-                    numberOfGuess = (numberOfGuess + 1);
-                } else if (userGuess < randonumber) {
-                    System.out.println("Your number is too low!");
-                    numberOfGuess = (numberOfGuess + 1);
-                } else if (userGuess == randonumber) {
-                    System.out.println("You guessed the correct number!!");
-                    numberOfGuess = MAX_GUESS_COUNT;
-                }
+                    System.out.println("Enter Your Guess:");
+                    userGuess = input.nextInt();
+                    if (userGuess > randonumber) {
+                        System.out.println("your number is to high");
+                        numberOfGuess = (numberOfGuess + 1);
+                    } else if (userGuess < randonumber) {
+                        System.out.println("Your number is too low!");
+                        numberOfGuess = (numberOfGuess + 1);
+                    } else if (userGuess == randonumber) {
+                        System.out.println("You guessed the correct number!!");
+                        numberOfGuess = MAX_GUESS_COUNT;
+                    }
 
-            } while ((numberOfGuess <= MAX_GUESS_COUNT));
+
+            }while ((numberOfGuess <= MAX_GUESS_COUNT));
 
             System.out.println("Sorry, you have ran out of chances. The correct number was:" + randonumber);
 
