@@ -17,8 +17,6 @@ public class Main {
         int numberOfGuess = (0);
         final int MAX_GUESS_COUNT = 4;
         int userGuess;
-
-
         do {
             int randonumber = (int) Math.ceil(Math.random() * 100);
 //            System.out.println(randonumber);
@@ -36,12 +34,11 @@ public class Main {
                         System.out.println("You guessed the correct number!!");
                         numberOfGuess = MAX_GUESS_COUNT;
                     }
-                }catch(InputMismatchException e){
-                    input.nextInt();
+                } catch (Exception e) {
+//                      input.nextInt();
                     System.out.println("Try again");
-                    userGuess = 0;
                 }
-            }while ((numberOfGuess <= MAX_GUESS_COUNT && userGuess != randonumber));
+            } while ((numberOfGuess == MAX_GUESS_COUNT && userGuess != randonumber));
 
             System.out.println("Sorry, you have ran out of chances. The correct number was:" + randonumber);
 
